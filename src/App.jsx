@@ -6,20 +6,23 @@ import Cart from "./features/cart/Cart.jsx";
 import CreateOrder from "./features/order/CreateOrder.jsx";
 import Order from "./features/order/Order.jsx";
 import AppLayout from "./ui/AppLayout.jsx";
+import Error from "./ui/Error.jsx";
 
 
 const router = createBrowserRouter([
     {
         element: <AppLayout/>,
+        errorElement: <Error/>,
         children: [
             {
                 path: '/',
-                element: <Home/>
+                element: <Home/>,
             },
             {
                 path: '/menu',
                 element: <Menu/>,
-                loader: menuLoader
+                loader: menuLoader,
+                errorElement:<Error/>,
             },
             {
                 path: '/cart',
