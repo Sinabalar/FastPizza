@@ -1,14 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SearchOrder from '../features/order/searchOrder.jsx'
-import UserName from '../features/users/UserName.jsx'
+import React from "react"
+import { Link } from "react-router-dom"
+import SearchOrder from "../features/order/searchOrder.jsx"
+import UserName from "../features/users/UserName.jsx"
 
 export default function Header() {
   return (
     <header
-      className={'border-b border-stone-200 bg-yellow-500 px-4 py-3 uppercase tracking-widest sm:px-6'}
+      className={
+        "flex items-center justify-between border-b border-stone-200 bg-yellow-500 px-4 py-3 uppercase tracking-widest sm:px-6"
+      }
     >
-      <Link to={'/'}>Fast Pizza</Link>
+      <Link to={"/"}>Fast Pizza</Link>
       <SearchOrder />
       <UserName />
     </header>
