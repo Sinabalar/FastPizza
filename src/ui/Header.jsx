@@ -6,9 +6,9 @@ import UserName from '../features/users/UserName.jsx'
 export default function Header() {
   return (
     <header
-      className={'border-b border-stone-200 bg-yellow-500 px-4 py-3 uppercase'}
+      className={'border-b border-stone-200 bg-yellow-500 px-4 py-3 uppercase tracking-widest sm:px-6'}
     >
-      <Link to={'/'}>FastPizza</Link>
+      <Link to={'/'}>Fast Pizza</Link>
       <SearchOrder />
       <UserName />
     </header>
