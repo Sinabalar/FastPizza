@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react"
 
 export default function Loader() {
-    return (
-        <div className={'loader'}></div>
-    );
+  return (
+    <div className={"absolute bg-slate-200/30 backdrop-blur-sm inset-0 flex items-center justify-center"}>
+      <div className={"loader"}></div>
+    </div>
+  )
 }

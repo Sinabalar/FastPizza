@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
 import LinkButton from "../../ui/LinkButton.jsx"
-import Button from '../../ui/Button.jsx'
+import Button from "../../ui/Button.jsx"
 
 const fakeCart = [
   {
