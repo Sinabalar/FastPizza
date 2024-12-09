@@ -13,6 +13,9 @@ export default function Button({ children, disabled, to, type, onClick }) {
     small:
       base +
       " bg-yellow-400 px-4 py-2 md:px-5 md:py-2.5 text-xs hover:bg-yellow-300 focus:bg-yellow-300 focus:ring-yellow-300",
+    round:
+      base +
+      " bg-yellow-400 px-2.5 py-1 md:px-3.5 md:py-2 text-s hover:bg-yellow-300 focus:bg-yellow-300 focus:ring-yellow-300",
   }
 
   if (to) {
