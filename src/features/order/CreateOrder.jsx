@@ -2,11 +2,12 @@ import { useState } from "react"
 import { Form, redirect, useActionData, useNavigation } from "react-router-dom"
 import { createOrder } from "../../services/apiRestaurant.js"
 import Button from "../../ui/Button.jsx"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { clearCart, getCart, getTotalCartPrice } from "../cart/cartSilce.js"
 import EmptyCart from "../cart/EmptyCart.jsx"
 import store from "../../store.js"
 import { formatCurrency } from "../../utils/helpers.js"
+import { fetchAddress } from "../users/userSlice.js"
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -27,6 +28,8 @@ function CreateOrder() {
   const priorityPrice = withPriority ? totalCartPrice * 0.2 : 0
   const totalPrice = totalCartPrice + priorityPrice
 
+  const dispatch = useDispatch()
+
   if (!cart.length) return <EmptyCart />
 
   return (
@@ -34,6 +37,8 @@ function CreateOrder() {
       <h2 className={"mb-8 text-xl font-semibold"}>
         Ready to order? Let's go!
       </h2>
+
+      <Button type={"primary"} onClick={()=>dispatch(fetchAddress())}>get GEOLOCATION</Button>
 
       <Form method={"POST"}>
         <div
